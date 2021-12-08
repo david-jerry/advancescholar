@@ -1,3 +1,5 @@
+from __future__ import absolute_import, unicode_literals
+
 """Custom logger configuration."""
 from sys import stdout
 

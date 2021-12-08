@@ -1,3 +1,5 @@
+from __future__ import absolute_import, unicode_literals
+
 from django.contrib.auth import forms as admin_forms
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
@@ -13,6 +15,9 @@ class UserChangeForm(admin_forms.UserChangeForm):
 class UserCreationForm(admin_forms.UserCreationForm):
     class Meta(admin_forms.UserCreationForm.Meta):
         model = User
+        fields = [
+            "first_name", "last_name", "email", "username"
+        ]
 
         error_messages = {
             "username": {"unique": _("This username has already been taken.")}

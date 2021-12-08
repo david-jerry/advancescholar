@@ -1,3 +1,5 @@
+from __future__ import absolute_import, unicode_literals
+
 from typing import Any
 
 from allauth.account.adapter import DefaultAccountAdapter
